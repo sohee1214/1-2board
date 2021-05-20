@@ -1,10 +1,12 @@
-/*
-*	º¸µå°ÔÀÓ ¸¸µé±â 21.05.13
-*	1. ÀüÃ¼ Ä­ÀÇ °¹¼ö 61°³
-*	2. ÇÃ·¹ÀÌ¾î°¡ °¡Áö°í ÀÖ¾î¾ß ÇÒ °Í
-*		- À§Ä¡Á¤º¸(¸») : 0 ºÎÅÍ ½ÃÀÛ
-*		- µ· : 5,000,000 ºÎÅÍ ½ÃÀÛ
-*		- ¾ÆÀÌÅÛ ÀÎº¥Åä¸® (³ªÁß¿¡ °¡´ÉÇÏ¸é)
+ï»¿/*
+*	ë³´ë“œê²Œìž„ ë§Œë“¤ê¸° 21.05.13
+*	1. ì „ì²´ ì¹¸ì˜ ê°¯ìˆ˜ 61ê°œ
+*	2. í”Œë ˆì´ì–´ê°€ ê°€ì§€ê³  ìžˆì–´ì•¼ í•  ê²ƒ
+*		- ìœ„ì¹˜ì •ë³´(ë§) : 0 ë¶€í„° ì‹œìž‘
+*		- ëˆ : 5,000,000 ë¶€í„° ì‹œìž‘
+*		- ì•„ì´í…œ ì¸ë²¤í† ë¦¬ (ë‚˜ì¤‘ì— ê°€ëŠ¥í•˜ë©´)
+*	3. íŒŒì‚°ì˜ ê¸°ì¤€
+*		- 0ì›ì´ ë˜ìžë§ˆìž íŒŒì‚°
 */
 
 
@@ -14,13 +16,13 @@
 
 void main(void)
 {
-	//Ä­ÀÇ ÃÖ´ë°¹¼ö
+	//ì¹¸ì˜ ìµœëŒ€ê°¯ìˆ˜
 	int max_length = 61;
 
-	//ÇÃ·¹ÀÌ¾îÀÇ À§Ä¡
+	//í”Œë ˆì´ì–´ì˜ ìœ„ì¹˜
 	int position = 0;
 
-	//ÁÖ»çÀ§
+	//ì£¼ì‚¬ìœ„
 	int dice;
 
 	int money = 5000000;
@@ -28,32 +30,46 @@ void main(void)
 	srand(time(0));
 	rand();
 
-	printf("ÇöÀçÀ§Ä¡ : %d, °¡Áø µ· : %d\n\n", position, money);
+	printf("í˜„ìž¬ìœ„ì¹˜ : %d, ê°€ì§„ ëˆ : %d\n\n", position, money);
 
 
 	while (1)
 	{
-		getchar();		// ÁÖ»çÀ§¸¦ ´øÁö±â À§ÇØ¼­´Â ¿£ÅÍÅ°¸¦ ´­·¯¾ß ÇÑ´Ù.
-		//ÁÖ»çÀ§ ´øÁö±â (1ºÎÅÍ 6±îÁö)
+		getchar();		// ì£¼ì‚¬ìœ„ë¥¼ ë˜ì§€ê¸° ìœ„í•´ì„œëŠ” ì—”í„°í‚¤ë¥¼ ëˆŒëŸ¬ì•¼ í•œë‹¤.
+		//ì£¼ì‚¬ìœ„ ë˜ì§€ê¸° (1ë¶€í„° 6ê¹Œì§€)
 		dice = rand() % 6 + 1;
 		position = position + dice;
-		printf("ÁÖ»çÀ§¸¦ ´øÁ®¼­ %d°¡ ³ª¿Ô½À´Ï´Ù.\n", dice);
-		printf("ÇöÀçÀ§Ä¡ : %d, °¡Áø µ· : %d\n\n", position, money);
+		printf("ì£¼ì‚¬ìœ„ë¥¼ ë˜ì ¸ì„œ %dê°€ ë‚˜ì™”ìŠµë‹ˆë‹¤.\n", dice);
+		printf("í˜„ìž¬ìœ„ì¹˜ : %d, ê°€ì§„ ëˆ : %d\n\n", position, money);
 
-		// 7¹ø¿¡ ÀÖÀ»¶§´Â 3¹øÀ¸·Î ÀÌµ¿
+		// 7ë²ˆì— ìžˆì„ë•ŒëŠ” 3ë²ˆìœ¼ë¡œ ì´ë™
 		if (position == 7)
 		{
-			printf("3¹ø À§Ä¡·Î ÀÌµ¿ÇÕ´Ï´Ù.\n");
+			printf("3ë²ˆ ìœ„ì¹˜ë¡œ ì´ë™í•©ë‹ˆë‹¤.\n");
 			position = 3;
-			printf("ÇöÀçÀ§Ä¡ : %d, °¡Áø µ· : %d\n\n", position, money);
+			printf("í˜„ìž¬ìœ„ì¹˜ : %d, ê°€ì§„ ëˆ : %d\n\n", position, money);
 		}
 
-		// 61À» ³Ñ±â¸é ¸ñÀûÁö¿¡ µµÂøÇÔ
-		if (position > 61)
+		if (position == 15)
 		{
-			printf("ÃàÇÏÇÕ´Ï´Ù. ¸ñÀûÁö¿¡ µµ´ÞÇÏ¿´½À´Ï´Ù.\n");
+			printf("ì£¼ì‹ì´ ë–¨ì–´ì ¸ 200ë§Œì›ì´ ì°¨ê°ë©ë‹ˆë‹¤.\n");
+			money -= 2000000;
+			printf("í˜„ìž¬ìœ„ì¹˜ : %d, ê°€ì§„ ëˆ : %d\n\n", position, money);
+		}
+
+		// íŒŒì‚°ì²˜ë¦¬
+		if (money <= 0)
+		{
+			printf("íŒŒì‚° í•˜ì˜€ìŠµë‹ˆë‹¤ã… ã… ã… \n");
 			break;
 		}
-	} // while¹® ³¡
-	printf("°ÔÀÓÀÌ ³¡³µ½À´Ï´Ù.");
+
+		// 61ì„ ë„˜ê¸°ë©´ ëª©ì ì§€ì— ë„ì°©í•¨
+		if (position > 61)
+		{
+			printf("ì¶•í•˜í•©ë‹ˆë‹¤. ëª©ì ì§€ì— ë„ë‹¬í•˜ì˜€ìŠµë‹ˆë‹¤.\n");
+			break;
+		}
+	} // whileë¬¸ ë
+	printf("ê²Œìž„ì´ ëë‚¬ìŠµë‹ˆë‹¤.");
 }

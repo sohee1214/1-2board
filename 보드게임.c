@@ -58,9 +58,9 @@ void main(void)
 			printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
 		}
 
-		if (position > 61)
+		if (position > MAX_LENGTH)
 		{
-			printf("61를 넘었기 때문에 무효처리 합니다.\n");
+			printf("%d를 넘었기 때문에 무효처리 합니다.\n", MAX_LENGTH);
 			// 무효처리를 하기위한 코드
 			position = position - dice;
 			printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
@@ -75,7 +75,7 @@ void main(void)
 		}
 
 		// 61 위치에만 있어야 게임을 끝낸다.
-		if (position == 61)
+		if (position == MAX_LENGTH)
 		{
 			printf("축하합니다. 목적지에 도달하였습니다.\n");
 			break;

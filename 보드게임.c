@@ -58,6 +58,14 @@ void main(void)
 			printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
 		}
 
+		if (position == 20)
+		{
+			printf("위치 20에 있어서 재산의 20%를 기부합니다.\n");
+			// money = money * 0.8;
+			money *= 0.8;
+			printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
+		}
+
 		if (position > MAX_LENGTH)
 		{
 			printf("%d를 넘었기 때문에 무효처리 합니다.\n", MAX_LENGTH);
@@ -82,3 +90,5 @@ void main(void)
 		}
 		////
 	} // while문 끝
+	printf("게임이 끝났습니다.");
+}

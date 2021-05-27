@@ -7,6 +7,8 @@
 *		- 아이템 인벤토리 (나중에 가능하면)
 *	3. 파산의 기준
 *		- 0원이 되자마자 파산
+*	4. 완료조건
+*		- 말이 61번째 위치에만 있어야 한다
 */
 
 
@@ -16,8 +18,8 @@
 
 void main(void)
 {
-	//칸의 최대갯수
-	int max_length = 61;
+	//칸의 최대갯수, 상수형 변수(공간)
+	const int MAX_LENGTH = 61;
 
 	//플레이어의 위치
 	int position = 0;
@@ -31,7 +33,6 @@ void main(void)
 	rand();
 
 	printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
-
 
 	while (1)
 	{

@@ -7,10 +7,13 @@ void main(void)
 	switch (a)
 	{
 	case 1:
-		printf("c언어의 박지우\n");
+		printf("한화의 김성근\n");
+		break;
 	case 2:
-		printf("선생님 안 사랑해\n");
+		printf("감독님 사랑해\n");
+		break;
 	default:
 		printf("예예예 예예예 예예예 예예예 예예예 예예예 예\n");
+		break;
 	}
 }

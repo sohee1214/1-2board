@@ -1,20 +1,16 @@
-#include<stdio.h>
+#include <stdio.h>
 
 void main(void)
 {
-	int a = 3;
+	int a = 1;
 
-	if (a == 1)
+	switch (a)
 	{
-		printf("c언어의 박지우");
-
-	}
-	else if (a == 2)
-	{
-		printf("선생님 안 사랑해");
-	}
-	else
-	{
-		printf("누가 나가는 소리를 내었는가");
+	case 1:
+		printf("c언어의 박지우\n");
+	case 2:
+		printf("선생님 안 사랑해\n");
+	default:
+		printf("예예예 예예예 예예예 예예예 예예예 예예예 예\n");
 	}
 }

@@ -44,7 +44,7 @@ void main(void)
 		printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
 
 		// test code
-		position = 20;
+		//position = 52;
 
 		switch (position)
 		{
@@ -64,6 +64,17 @@ void main(void)
 			printf("위치 20에 있어서 재산의 20%%를 기부합니다.\n");
 			// money = money * 0.8;
 			money *= 0.8;
+			printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
+			break;
+
+		case 52:
+			printf("위치 52 무인도에 갇혔습니다.\n");
+			for (int i = 1; i <= 3; i++)
+			{
+				getchar();
+				printf("%d번째 입니다.\n",i);
+			}
+
 			printf("현재위치 : %d, 가진 돈 : %d\n\n", position, money);
 			break;
 		}

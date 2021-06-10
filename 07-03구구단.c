@@ -2,9 +2,10 @@
 
 void main(void)
 {
+	int dan = 3;
 	for (int i = 1; i <= 9; i++)
 	{
-		printf("2 X %d = %d\n", i, 2 * i);
+		printf("%d X %d = %d\n", dan, i, dan * i);
 	}
 	/*
 	printf("2 X 2 = %d\n", 2*2);

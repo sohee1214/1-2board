@@ -39,4 +39,4 @@ void cal_grade(int score)
 		printf("D입니다 \n");
 	else
 		printf("E입니다 \n");
-}
+} //이다
